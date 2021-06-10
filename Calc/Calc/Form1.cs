@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Math;
 
 namespace Calc
 {
@@ -21,6 +22,10 @@ namespace Calc
             InitializeComponent();
             random = new Random();
         }
+
+        double a, b;
+        int count;
+        bool znak = true;
 
         private Color SelectThemeColor()//функция отвечающая за смену цвета кнопок в меню
         {
@@ -62,6 +67,34 @@ namespace Calc
                     previousBtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
             }
+        }
+
+        private void calculute()
+        {
+            switch (count)
+            {
+                case 1:
+                    b = a + double.Parse(textBox1.Text);
+                    textBox1.Text = b.ToString();
+                    break;
+                case 2:
+                    b = a - double.Parse(textBox1.Text);
+                    textBox1.Text = b.ToString();
+                    break;
+                case 3:
+                    b = a * double.Parse(textBox1.Text);
+                    textBox1.Text = b.ToString();
+                    break;
+                case 4:
+                    b = a / double.Parse(textBox1.Text);
+                    textBox1.Text = b.ToString();
+                    break;
+                
+
+                default:
+                    break;
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)//главное меню
@@ -136,14 +169,160 @@ namespace Calc
             textBox1.Text = textBox1.Text + 9;
         }
 
-        private void clear_Click(object sender, EventArgs e)
+        private void zapyataya_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = textBox1.Text + ",";
         }
+
+
+        private void clear_Click(object sender, EventArgs e)//удаляем последнию цифру
+        {
+            int lenght = textBox1.Text.Length - 1;
+            string text = textBox1.Text;
+            textBox1.Clear();
+            for (int i = 0; i < lenght; i++)
+            {
+                textBox1.Text = textBox1.Text + text[i];
+            }
+        }
+
+        private void plus_Click(object sender, EventArgs e)//функция плюса
+        {
+            if (textBox1.Text == "" || textBox1.Text == "-")
+            {
+                textBox1.Text = "";
+            }
+            else
+            {
+                a = double.Parse(textBox1.Text);
+                textBox1.Clear();
+                count = 1;
+                resultat.Text = a.ToString() + "+";
+                znak = true;
+            }
+        }
+
+        private void minus_Click(object sender, EventArgs e)//функция минуса
+        {
+            if (textBox1.Text == "" || textBox1.Text == "-")
+            {
+                textBox1.Text = "";
+            }
+            else
+            {
+                a = double.Parse(textBox1.Text);
+                textBox1.Clear();
+                count = 2;
+                resultat.Text = a.ToString() + "-";
+                znak = true;
+            }
+        }
+
+        private void umn_Click(object sender, EventArgs e)//функция умножения
+        {
+            if (textBox1.Text == "" || textBox1.Text == "-")
+            {
+                textBox1.Text = "";
+            }
+            else
+            {
+                a = double.Parse(textBox1.Text);
+                textBox1.Clear();
+                count = 3;
+                resultat.Text = a.ToString() + "*";
+                znak = true;
+            }
+        }
+
+        private void delenie_Click(object sender, EventArgs e)//функция деления
+        {
+            if (textBox1.Text == "" || textBox1.Text == "-")
+            {
+                textBox1.Text = "";
+            }
+            else
+            {
+                a = double.Parse(textBox1.Text);
+                textBox1.Clear();
+                count = 4;
+                resultat.Text = a.ToString() + "/";
+                znak = true;
+            }
+        }
+
+        private void ravno_Click(object sender, EventArgs e)//вывод результата
+        {
+            calculute();
+            resultat.Text = "";
+        }
+
+        private void zn_Click(object sender, EventArgs e)//изменения знака числа
+        {
+            if (znak == true)
+            {
+                textBox1.Text = "-" + textBox1.Text;
+                znak = false;
+            }
+            else if (znak == false)
+            {
+                textBox1.Text = textBox1.Text.Replace("-", "");
+                znak = true;
+            }
+        }
+
+        private void kv_x_Click(object sender, EventArgs e)//фунция возведения в квадрат
+        {
+            if (textBox1.Text == "" || textBox1.Text == "-")
+            {
+                textBox1.Text = "";
+            }
+            else
+            {
+                a = double.Parse(textBox1.Text);
+                textBox1.Clear();
+                znak = true;
+                b = a * a;
+                resultat.Text = "";
+                textBox1.Text = b.ToString();
+            }
+        }
+
+        private void sqrtt_Click(object sender, EventArgs e)//функция квадратного корня
+        {
+            if (textBox1.Text == "" || textBox1.Text == "-")
+            {
+                textBox1.Text = "";
+            }
+            else
+            {
+                a = double.Parse(textBox1.Text);
+                textBox1.Clear();
+                count = 5;
+                resultat.Text = "√(" + a.ToString() + ")";
+                if (znak == false)
+                {
+                    resultat.Text = "Error";
+                    textBox1.Text = "";
+                    znak = true;
+                }
+                else
+                {
+                    b = Math.Sqrt(a);
+                    resultat.Text = "";
+                    textBox1.Text = b.ToString();
+                    znak = true;
+                }
+            }
+        }
+
+       
 
         private void reset_Click(object sender, EventArgs e)//очищение поля ввода
         {
             textBox1.Clear();
+            resultat.Text = "";
+            
+  
         }
     }
 }
