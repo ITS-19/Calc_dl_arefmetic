@@ -74,7 +74,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(142, 454);
+            this.panelMenu.Size = new System.Drawing.Size(166, 493);
             this.panelMenu.TabIndex = 0;
             // 
             // button3
@@ -82,11 +82,11 @@
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Font = new System.Drawing.Font("Verdana", 15.75F);
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(0, 187);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(142, 60);
+            this.button3.Size = new System.Drawing.Size(166, 60);
             this.button3.TabIndex = 3;
             this.button3.Text = "Выход";
             this.button3.UseVisualStyleBackColor = true;
@@ -97,11 +97,11 @@
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Font = new System.Drawing.Font("Verdana", 15.75F);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(0, 127);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(142, 60);
+            this.button2.Size = new System.Drawing.Size(166, 60);
             this.button2.TabIndex = 2;
             this.button2.Text = "Настройки";
             this.button2.UseVisualStyleBackColor = true;
@@ -112,11 +112,11 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Font = new System.Drawing.Font("Verdana", 15.75F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(0, 67);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 60);
+            this.button1.Size = new System.Drawing.Size(166, 60);
             this.button1.TabIndex = 1;
             this.button1.Text = "Калькулятор";
             this.button1.UseVisualStyleBackColor = true;
@@ -130,7 +130,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(142, 67);
+            this.panelLogo.Size = new System.Drawing.Size(166, 67);
             this.panelLogo.TabIndex = 0;
             // 
             // one
@@ -141,7 +141,7 @@
             this.one.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.one.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.one.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.one.Location = new System.Drawing.Point(348, 314);
+            this.one.Location = new System.Drawing.Point(404, 331);
             this.one.Name = "one";
             this.one.Size = new System.Drawing.Size(60, 60);
             this.one.TabIndex = 1;
@@ -157,7 +157,7 @@
             this.three.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.three.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.three.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.three.Location = new System.Drawing.Point(480, 314);
+            this.three.Location = new System.Drawing.Point(536, 331);
             this.three.Name = "three";
             this.three.Size = new System.Drawing.Size(60, 60);
             this.three.TabIndex = 2;
@@ -173,7 +173,7 @@
             this.two.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.two.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.two.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.two.Location = new System.Drawing.Point(414, 314);
+            this.two.Location = new System.Drawing.Point(470, 331);
             this.two.Name = "two";
             this.two.Size = new System.Drawing.Size(60, 60);
             this.two.TabIndex = 3;
@@ -189,7 +189,7 @@
             this.zero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.zero.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.zero.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.zero.Location = new System.Drawing.Point(414, 380);
+            this.zero.Location = new System.Drawing.Point(470, 397);
             this.zero.Name = "zero";
             this.zero.Size = new System.Drawing.Size(60, 60);
             this.zero.TabIndex = 4;
@@ -205,7 +205,7 @@
             this.four.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.four.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.four.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.four.Location = new System.Drawing.Point(348, 248);
+            this.four.Location = new System.Drawing.Point(404, 265);
             this.four.Name = "four";
             this.four.Size = new System.Drawing.Size(60, 60);
             this.four.TabIndex = 5;
@@ -221,7 +221,7 @@
             this.five.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.five.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.five.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.five.Location = new System.Drawing.Point(414, 248);
+            this.five.Location = new System.Drawing.Point(470, 265);
             this.five.Name = "five";
             this.five.Size = new System.Drawing.Size(60, 60);
             this.five.TabIndex = 6;
@@ -237,7 +237,7 @@
             this.six.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.six.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.six.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.six.Location = new System.Drawing.Point(480, 248);
+            this.six.Location = new System.Drawing.Point(536, 265);
             this.six.Name = "six";
             this.six.Size = new System.Drawing.Size(60, 60);
             this.six.TabIndex = 7;
@@ -253,7 +253,7 @@
             this.seven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.seven.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.seven.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.seven.Location = new System.Drawing.Point(348, 183);
+            this.seven.Location = new System.Drawing.Point(404, 200);
             this.seven.Name = "seven";
             this.seven.Size = new System.Drawing.Size(60, 60);
             this.seven.TabIndex = 8;
@@ -269,7 +269,7 @@
             this.eight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.eight.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.eight.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.eight.Location = new System.Drawing.Point(414, 183);
+            this.eight.Location = new System.Drawing.Point(470, 200);
             this.eight.Name = "eight";
             this.eight.Size = new System.Drawing.Size(60, 60);
             this.eight.TabIndex = 9;
@@ -285,7 +285,7 @@
             this.nine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nine.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nine.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.nine.Location = new System.Drawing.Point(480, 183);
+            this.nine.Location = new System.Drawing.Point(536, 200);
             this.nine.Name = "nine";
             this.nine.Size = new System.Drawing.Size(60, 60);
             this.nine.TabIndex = 10;
@@ -301,7 +301,7 @@
             this.ravno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ravno.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ravno.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.ravno.Location = new System.Drawing.Point(546, 314);
+            this.ravno.Location = new System.Drawing.Point(602, 331);
             this.ravno.Name = "ravno";
             this.ravno.Size = new System.Drawing.Size(60, 126);
             this.ravno.TabIndex = 11;
@@ -317,7 +317,7 @@
             this.minus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minus.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.minus.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.minus.Location = new System.Drawing.Point(546, 182);
+            this.minus.Location = new System.Drawing.Point(602, 199);
             this.minus.Name = "minus";
             this.minus.Size = new System.Drawing.Size(60, 60);
             this.minus.TabIndex = 12;
@@ -333,7 +333,7 @@
             this.plus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plus.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.plus.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.plus.Location = new System.Drawing.Point(546, 248);
+            this.plus.Location = new System.Drawing.Point(602, 265);
             this.plus.Name = "plus";
             this.plus.Size = new System.Drawing.Size(60, 60);
             this.plus.TabIndex = 14;
@@ -349,7 +349,7 @@
             this.zapyataya.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.zapyataya.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.zapyataya.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.zapyataya.Location = new System.Drawing.Point(480, 380);
+            this.zapyataya.Location = new System.Drawing.Point(536, 397);
             this.zapyataya.Name = "zapyataya";
             this.zapyataya.Size = new System.Drawing.Size(60, 60);
             this.zapyataya.TabIndex = 15;
@@ -365,7 +365,7 @@
             this.procent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.procent.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.procent.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.procent.Location = new System.Drawing.Point(348, 380);
+            this.procent.Location = new System.Drawing.Point(404, 397);
             this.procent.Name = "procent";
             this.procent.Size = new System.Drawing.Size(60, 60);
             this.procent.TabIndex = 16;
@@ -379,12 +379,13 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.textBox1.Location = new System.Drawing.Point(150, 12);
+            this.textBox1.Location = new System.Drawing.Point(206, 12);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(456, 98);
+            this.textBox1.Size = new System.Drawing.Size(456, 115);
             this.textBox1.TabIndex = 17;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // clear
             // 
@@ -394,7 +395,7 @@
             this.clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.clear.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.clear.Location = new System.Drawing.Point(480, 116);
+            this.clear.Location = new System.Drawing.Point(536, 133);
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(60, 60);
             this.clear.TabIndex = 18;
@@ -410,7 +411,7 @@
             this.reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.reset.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.reset.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.reset.Location = new System.Drawing.Point(546, 116);
+            this.reset.Location = new System.Drawing.Point(602, 133);
             this.reset.Name = "reset";
             this.reset.Size = new System.Drawing.Size(60, 60);
             this.reset.TabIndex = 19;
@@ -426,7 +427,7 @@
             this.sqrtt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sqrtt.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.sqrtt.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.sqrtt.Location = new System.Drawing.Point(282, 183);
+            this.sqrtt.Location = new System.Drawing.Point(338, 200);
             this.sqrtt.Name = "sqrtt";
             this.sqrtt.Size = new System.Drawing.Size(60, 125);
             this.sqrtt.TabIndex = 20;
@@ -442,12 +443,13 @@
             this.log.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.log.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.log.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.log.Location = new System.Drawing.Point(216, 182);
+            this.log.Location = new System.Drawing.Point(272, 199);
             this.log.Name = "log";
             this.log.Size = new System.Drawing.Size(60, 126);
             this.log.TabIndex = 21;
             this.log.Text = "log";
             this.log.UseVisualStyleBackColor = false;
+            this.log.Click += new System.EventHandler(this.log_Click);
             // 
             // kv_x
             // 
@@ -457,7 +459,7 @@
             this.kv_x.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kv_x.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.kv_x.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.kv_x.Location = new System.Drawing.Point(150, 182);
+            this.kv_x.Location = new System.Drawing.Point(206, 199);
             this.kv_x.Name = "kv_x";
             this.kv_x.Size = new System.Drawing.Size(60, 126);
             this.kv_x.TabIndex = 22;
@@ -473,12 +475,13 @@
             this.n_sqrt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.n_sqrt.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.n_sqrt.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.n_sqrt.Location = new System.Drawing.Point(282, 314);
+            this.n_sqrt.Location = new System.Drawing.Point(338, 331);
             this.n_sqrt.Name = "n_sqrt";
             this.n_sqrt.Size = new System.Drawing.Size(60, 126);
             this.n_sqrt.TabIndex = 23;
             this.n_sqrt.Text = "ⁿ√x";
             this.n_sqrt.UseVisualStyleBackColor = false;
+            this.n_sqrt.Click += new System.EventHandler(this.n_sqrt_Click);
             // 
             // ln
             // 
@@ -488,12 +491,13 @@
             this.ln.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ln.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ln.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.ln.Location = new System.Drawing.Point(216, 314);
+            this.ln.Location = new System.Drawing.Point(272, 331);
             this.ln.Name = "ln";
             this.ln.Size = new System.Drawing.Size(60, 126);
             this.ln.TabIndex = 24;
             this.ln.Text = "ln";
             this.ln.UseVisualStyleBackColor = false;
+            this.ln.Click += new System.EventHandler(this.ln_Click);
             // 
             // n_x
             // 
@@ -503,12 +507,13 @@
             this.n_x.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.n_x.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.n_x.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.n_x.Location = new System.Drawing.Point(150, 314);
+            this.n_x.Location = new System.Drawing.Point(206, 331);
             this.n_x.Name = "n_x";
             this.n_x.Size = new System.Drawing.Size(60, 126);
             this.n_x.TabIndex = 25;
             this.n_x.Text = "xⁿ";
             this.n_x.UseVisualStyleBackColor = false;
+            this.n_x.Click += new System.EventHandler(this.n_x_Click);
             // 
             // resultat
             // 
@@ -516,7 +521,7 @@
             this.resultat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(59)))));
             this.resultat.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.resultat.ForeColor = System.Drawing.Color.Cornsilk;
-            this.resultat.Location = new System.Drawing.Point(166, 29);
+            this.resultat.Location = new System.Drawing.Point(215, 38);
             this.resultat.Name = "resultat";
             this.resultat.Size = new System.Drawing.Size(0, 38);
             this.resultat.TabIndex = 26;
@@ -529,7 +534,7 @@
             this.umn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.umn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.umn.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.umn.Location = new System.Drawing.Point(414, 117);
+            this.umn.Location = new System.Drawing.Point(470, 134);
             this.umn.Name = "umn";
             this.umn.Size = new System.Drawing.Size(60, 60);
             this.umn.TabIndex = 27;
@@ -545,7 +550,7 @@
             this.delenie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delenie.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.delenie.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.delenie.Location = new System.Drawing.Point(348, 117);
+            this.delenie.Location = new System.Drawing.Point(404, 134);
             this.delenie.Name = "delenie";
             this.delenie.Size = new System.Drawing.Size(60, 60);
             this.delenie.TabIndex = 28;
@@ -561,7 +566,7 @@
             this.zn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.zn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.zn.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.zn.Location = new System.Drawing.Point(282, 117);
+            this.zn.Location = new System.Drawing.Point(338, 134);
             this.zn.Name = "zn";
             this.zn.Size = new System.Drawing.Size(60, 60);
             this.zn.TabIndex = 29;
@@ -574,7 +579,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(609, 454);
+            this.ClientSize = new System.Drawing.Size(704, 493);
             this.Controls.Add(this.zn);
             this.Controls.Add(this.delenie);
             this.Controls.Add(this.umn);

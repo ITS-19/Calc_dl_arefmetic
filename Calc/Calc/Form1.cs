@@ -24,7 +24,7 @@ namespace Calc
         }
 
         double a, b;
-        int count;
+        int count = 0;
         bool znak = true;
 
         private Color SelectThemeColor()//функция отвечающая за смену цвета кнопок в меню
@@ -50,7 +50,7 @@ namespace Calc
                     currentButton = (Button)btnSender;
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
-                    currentButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    currentButton.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     
                 }
             }
@@ -64,35 +64,58 @@ namespace Calc
                 {
                     previousBtn.BackColor = Color.FromArgb(51, 51, 76);
                     previousBtn.ForeColor = Color.Gainsboro;
-                    previousBtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    previousBtn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
             }
         }
 
         private void calculute()
         {
-            switch (count)
+            if (textBox1.Text == "")
             {
-                case 1:
-                    b = a + double.Parse(textBox1.Text);
-                    textBox1.Text = b.ToString();
-                    break;
-                case 2:
-                    b = a - double.Parse(textBox1.Text);
-                    textBox1.Text = b.ToString();
-                    break;
-                case 3:
-                    b = a * double.Parse(textBox1.Text);
-                    textBox1.Text = b.ToString();
-                    break;
-                case 4:
-                    b = a / double.Parse(textBox1.Text);
-                    textBox1.Text = b.ToString();
-                    break;
-                
+                textBox1.Text = textBox1 + "";
+            }
+            else
+            {
+                switch (count)
+                {
+                    case 0:
+                        resultat.Text = "";
+                        textBox1.Text = "";
+                        break;
+                    case 1:
+                        b = a + double.Parse(textBox1.Text);
+                        textBox1.Text = b.ToString();
+                        resultat.Text = "";
+                        break;
+                    case 2:
+                        b = a - double.Parse(textBox1.Text);
+                        textBox1.Text = b.ToString();
+                        resultat.Text = "";
+                        break;
+                    case 3:
+                        b = a * double.Parse(textBox1.Text);
+                        textBox1.Text = b.ToString();
+                        resultat.Text = "";
+                        break;
+                    case 4:
+                        if (double.Parse(textBox1.Text) == 0)
+                        {
+                            resultat.Text = "Error";
+                            textBox1.Text = "";
+                        }
+                        else
+                        {
+                            b = a / double.Parse(textBox1.Text);
+                            textBox1.Text = b.ToString();
+                            resultat.Text = "";
+                        }
+                        break;
 
-                default:
-                    break;
+
+                    default:
+                        break;
+                }
             }
 
         }
@@ -112,71 +135,87 @@ namespace Calc
             ActivateButton(sender);
             Close();
         }
+ 
 
-
-        private void slider_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void zero_Click(object sender, EventArgs e)//цифра ноль
         {
+            ActivateButton(sender);
             textBox1.Text = textBox1.Text + 0;
         }
 
         private void one_Click(object sender, EventArgs e)//цифра один
         {
+            ActivateButton(sender);
             textBox1.Text = textBox1.Text + 1;
         }
 
         private void two_Click(object sender, EventArgs e)//цифра два
         {
+            ActivateButton(sender);
             textBox1.Text = textBox1.Text + 2;
         }
 
         private void three_Click(object sender, EventArgs e)//цифра три
         {
+            ActivateButton(sender);
             textBox1.Text = textBox1.Text + 3;
         }
 
         private void four_Click(object sender, EventArgs e)//цифра четыре
         {
+            ActivateButton(sender);
             textBox1.Text = textBox1.Text + 4;
         }
 
         private void five_Click(object sender, EventArgs e)//цифра пять
         {
+            ActivateButton(sender);
             textBox1.Text = textBox1.Text + 5;
         }
 
         private void six_Click(object sender, EventArgs e)//цифра шесть
         {
+            ActivateButton(sender);
             textBox1.Text = textBox1.Text + 6;
         }
 
         private void seven_Click(object sender, EventArgs e)//цифра семь
         {
+            ActivateButton(sender);
             textBox1.Text = textBox1.Text + 7;
         }
 
         private void eight_Click(object sender, EventArgs e)//цифра восемь
         {
+            ActivateButton(sender);
             textBox1.Text = textBox1.Text + 8;
         }
 
         private void nine_Click(object sender, EventArgs e)//цифра девять
         {
+            ActivateButton(sender);
             textBox1.Text = textBox1.Text + 9;
         }
 
-        private void zapyataya_Click(object sender, EventArgs e)
+        private void zapyataya_Click(object sender, EventArgs e)//запятая
         {
-            textBox1.Text = textBox1.Text + ",";
+            ActivateButton(sender);
+            if (textBox1.Text.ToLower().Contains(','))
+            {
+                textBox1.Text = textBox1.Text + "";
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + ",";
+            }
         }
+
 
 
         private void clear_Click(object sender, EventArgs e)//удаляем последнию цифру
         {
+            ActivateButton(sender);
             int lenght = textBox1.Text.Length - 1;
             string text = textBox1.Text;
             textBox1.Clear();
@@ -188,6 +227,7 @@ namespace Calc
 
         private void plus_Click(object sender, EventArgs e)//функция плюса
         {
+            ActivateButton(sender);
             if (textBox1.Text == "" || textBox1.Text == "-")
             {
                 textBox1.Text = "";
@@ -204,6 +244,7 @@ namespace Calc
 
         private void minus_Click(object sender, EventArgs e)//функция минуса
         {
+            ActivateButton(sender);
             if (textBox1.Text == "" || textBox1.Text == "-")
             {
                 textBox1.Text = "";
@@ -220,6 +261,7 @@ namespace Calc
 
         private void umn_Click(object sender, EventArgs e)//функция умножения
         {
+            ActivateButton(sender);
             if (textBox1.Text == "" || textBox1.Text == "-")
             {
                 textBox1.Text = "";
@@ -236,6 +278,7 @@ namespace Calc
 
         private void delenie_Click(object sender, EventArgs e)//функция деления
         {
+            ActivateButton(sender);
             if (textBox1.Text == "" || textBox1.Text == "-")
             {
                 textBox1.Text = "";
@@ -252,12 +295,14 @@ namespace Calc
 
         private void ravno_Click(object sender, EventArgs e)//вывод результата
         {
+            ActivateButton(sender);
             calculute();
-            resultat.Text = "";
+            
         }
 
         private void zn_Click(object sender, EventArgs e)//изменения знака числа
         {
+            ActivateButton(sender);
             if (znak == true)
             {
                 textBox1.Text = "-" + textBox1.Text;
@@ -272,6 +317,7 @@ namespace Calc
 
         private void kv_x_Click(object sender, EventArgs e)//фунция возведения в квадрат
         {
+            ActivateButton(sender);
             if (textBox1.Text == "" || textBox1.Text == "-")
             {
                 textBox1.Text = "";
@@ -289,6 +335,7 @@ namespace Calc
 
         private void sqrtt_Click(object sender, EventArgs e)//функция квадратного корня
         {
+            ActivateButton(sender);
             if (textBox1.Text == "" || textBox1.Text == "-")
             {
                 textBox1.Text = "";
@@ -315,10 +362,38 @@ namespace Calc
             }
         }
 
-       
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void log_Click(object sender, EventArgs e)//функция логарифма
+        {
+            ActivateButton(sender);
+        }
+
+        private void ln_Click(object sender, EventArgs e)//функция натурального логарифма
+        {
+            ActivateButton(sender);
+        }
+
+        private void n_x_Click(object sender, EventArgs e)//функция возведения в степень n
+        {
+            ActivateButton(sender);
+        }
+
+        private void n_sqrt_Click(object sender, EventArgs e)//функция извлечения корня n-ой степени
+        {
+            ActivateButton(sender);
+        }
 
         private void reset_Click(object sender, EventArgs e)//очищение поля ввода
         {
+            ActivateButton(sender);
             textBox1.Clear();
             resultat.Text = "";
             
