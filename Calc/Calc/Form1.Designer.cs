@@ -84,7 +84,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Verdana", 15.75F);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 187);
+            this.button3.Location = new System.Drawing.Point(0, 205);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(166, 60);
             this.button3.TabIndex = 3;
@@ -99,7 +99,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Verdana", 15.75F);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 127);
+            this.button2.Location = new System.Drawing.Point(0, 145);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(166, 60);
             this.button2.TabIndex = 2;
@@ -114,7 +114,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 15.75F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 67);
+            this.button1.Location = new System.Drawing.Point(0, 85);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(166, 60);
             this.button1.TabIndex = 1;
@@ -130,7 +130,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(166, 67);
+            this.panelLogo.Size = new System.Drawing.Size(166, 85);
             this.panelLogo.TabIndex = 0;
             // 
             // one
