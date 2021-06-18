@@ -20,7 +20,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./Calc/Calc.sln
     - name: Build
-      run: dotnet build --no-restore --configuration Debug
+      run: dotnet build --no-restore --configuration Debug ./Calc/Calc.sln
    # - name: Test
    #   run: dotnet test --no-build --verbosity normal
     - name: Upload a Build Artifact
