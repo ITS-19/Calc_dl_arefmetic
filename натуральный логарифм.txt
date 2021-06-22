@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Numerics;
+using static ExtendedNumerics.BigRational;
+using System.Media;
+
+
+
+
+namespace Calc
+{
+    public static class Func
+    {
+	public static string NLogarifm(string st1)//натуральный логарифм 
+        {
+            BigInteger s1 = BigInteger.Parse(st1);
+            double u = BigInteger.Log(s1);
+            string result = u + "";
+            return result;
+        }
+    }
+}
