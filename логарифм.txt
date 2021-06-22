@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Numerics;
+using static ExtendedNumerics.BigRational;
+using System.Media;
+
+
+
+
+namespace Calc
+{
+    public static class Func
+    {
+	public static string Logarifm(string st1, string st2)//логарифм числа
+        {
+            BigInteger s1 = BigInteger.Parse(st1);
+            double s2 = double.Parse(st2);
+            double u = BigInteger.Log(s1, s2);
+            string result = u + "";
+            return result;
+        }
+    }
+}
