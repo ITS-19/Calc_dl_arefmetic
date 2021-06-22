@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Numerics;
+using static ExtendedNumerics.BigRational;
+using System.Media;
+
+
+
+
+namespace Calc
+{
+    public static class Func
+    {
+	public static string Kv_koren(string st1)//квадратный корень(ДОРАБОТАТЬ)
+        {
+            System.Numerics.BigInteger N = System.Numerics.BigInteger.Parse(st1);
+            BigInteger rootN = N;
+            int bitLength = 1;
+            while (rootN / 2 != 0)
+            {
+                rootN /= 2;
+                bitLength++;
+            }
+            bitLength = (bitLength + 1) / 2;
+            rootN = N >> bitLength;
+
+            BigInteger lastRoot = BigInteger.Zero;
+            do
+            {
+                lastRoot = rootN;
+                rootN = (BigInteger.Divide(N, rootN) + rootN) >> 1;
+            }
+            while (!((rootN ^ lastRoot).ToString() == "0"));
+            string rootN1 = rootN + "";
+            return rootN1;
+        }
+    }
+}
