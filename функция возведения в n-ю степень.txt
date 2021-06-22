@@ -1,0 +1,20 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Numerics;
+
+
+namespace Calc
+{
+	public static string Vozv_n_stp(string st1, string st2)//возведения в n-ю степень
+        {
+            BigInteger s1 = BigInteger.Parse(st1);
+            int s2 = int.Parse(st2);
+            BigInteger u = BigInteger.Pow(s1, s2);
+            string result = u + "";
+            return result;
+        }
+}
