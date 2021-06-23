@@ -16,9 +16,17 @@ namespace Calc
     {
 	public static string NLogarifm(string st1)//натуральный логарифм 
         {
-            BigInteger s1 = BigInteger.Parse(st1);
-            double u = BigInteger.Log(s1);
-            string result = u + "";
+            string result = "";
+            if (!(st1.ToLower().Contains('-')))
+            {
+                BigInteger s1 = BigInteger.Parse(st1);
+                double u = BigInteger.Log(s1);
+                result = u + "";
+            }
+            else
+            {
+                result = "Вы ввели отрицательное число!";
+            }
             return result;
         }
     }
