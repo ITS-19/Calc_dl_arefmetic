@@ -170,20 +170,31 @@ namespace Calc
   
                 }
 
-        private void ravno_Click(object sender, EventArgs e)/*вывод результата ИСПРАВИТЬ*/
+        private void ravno_Click(object sender, EventArgs e)//вывод результата
         {
             if (textBox1.Text == "")
             {
-                if (s1.IndexOf("-") != 0 || s2.IndexOf("-") != 0)
-                    listBox1.Items.Insert(cl, "Ошибка! Вы ввели некорректное число!");
+                if (s1.Contains("-") || textBox1.Text.Contains("-"))
+                {
+                    if (s1.IndexOf("-") != 0 || textBox1.Text.IndexOf("-") != 0)
+                        listBox1.Items.Insert(cl, "Ошибка! Вы ввели некорректное число!");
+                    else if (YT == true)
+                    {
+                        calculate();
+                        YT = false;
+                    }
+                }
                 else if (YT == true)
                 {
                     calculate();
                     YT = false;
                 }
             }
-            else if(s1.IndexOf("-") != 0 || s2.IndexOf("-") != 0)
+            else if (s1.Contains("-") || textBox1.Text.Contains("-"))
+            {
+                if (s1.IndexOf("-") != 0 || textBox1.Text.IndexOf("-") != 0)
                 listBox1.Items.Insert(cl, "Ошибка! Вы ввели некорректное число!");
+                }
             else
                 calculate();
 
@@ -378,8 +389,9 @@ namespace Calc
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)//запрет на ввод символов
         {
             char ch = e.KeyChar;
+            if (ch == 13) ch ='g'; 
             //67 65 86 88 90
-            if ((!(Char.IsDigit(ch) || char.IsControl(e.KeyChar)) && !(ch == 8 || ch ==67 || ch ==86 || ch == 88))) e.Handled = true;
+            if ((!(Char.IsDigit(ch) || char.IsControl(ch)) && !(ch == 8 || ch ==67 || ch ==86 || ch == 88 || ch == 90))) e.Handled = true;
 
 
         }
