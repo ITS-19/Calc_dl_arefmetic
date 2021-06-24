@@ -292,21 +292,6 @@ namespace Calc
             }
         }
 
-        /*private void sqrtt_Click(object sender, EventArgs e)//функция квадратного корня
-        {
-            if (textBox1.Text == "" || textBox1.Text == "-")
-            {
-
-            }
-            else
-            {
-                s1 = textBox1.Text;
-                count = 10;
-                textBox1.Clear();
-                vvd.Text = "√" + s1;
-            }
-        }*/
-
         private void log_Click(object sender, EventArgs e)//функция логарифма
         {
 
@@ -356,23 +341,17 @@ namespace Calc
             }
         }
 
-        private void Form1_MouseDown(object sender, MouseEventArgs e)
-        {
-            base.Capture = false;
-            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
-            this.WndProc(ref m);
-        }
-
         private void fact_Click(object sender, EventArgs e)
         {
 
-            double proverka = double.Parse(textBox1.Text);
+            
             if (textBox1.Text == "" || textBox1.Text == "-")
             {
 
             }
             else 
             {
+                double proverka = double.Parse(textBox1.Text);
                 if (proverka <= 11984)
                 {
                     YT = true;
@@ -465,6 +444,20 @@ namespace Calc
         private void Form1_Shown(object sender, EventArgs e)//задаёт фокус текстбокса
         {
             textBox1.Focus();
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            base.Capture = false;
+            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+            this.WndProc(ref m);
+        }
+
+        private void panelMenu_MouseDown(object sender, MouseEventArgs e)
+        {
+            base.Capture = false;
+            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+            this.WndProc(ref m);
         }
 
         #endregion Настройки ввода в textbox

@@ -41,9 +41,13 @@ namespace Calc
         {
             if (st1.Length <= 15 && st2.Length <= 15)
             {
+                string result2;
                 double s1_1 = double.Parse(st1);
                 double s1_2 = double.Parse(st2);
-                string result2 = (s1_1 / s1_2) + "";
+                if (s1_2 != 0)
+                    result2 = (s1_1 / s1_2) + "";
+                else
+                    result2 = "Ошибка! Вы поделили на ноль!";
                 return result2;
             }
             else
@@ -51,10 +55,13 @@ namespace Calc
                 ExtendedNumerics.BigRational s1 = ExtendedNumerics.BigRational.Parse(st1);
                 ExtendedNumerics.BigRational s2 = ExtendedNumerics.BigRational.Parse(st2);
                 string result;
-                ExtendedNumerics.BigRational u;
-                u = s1 / s2;
-                result = u + "";
-
+                ExtendedNumerics.BigRational u, o = ExtendedNumerics.BigRational.Parse("0");
+                if (s2 != o)
+                {
+                    u = s1 / s2;
+                    result = u + "";
+                }
+                else result = "Ошибка! Вы поделили на 0!";
                 return result;
             }
         }
@@ -143,6 +150,7 @@ namespace Calc
                 BigInteger s1 = BigInteger.Parse(st1);
                 double s2 = double.Parse(st2);
                 double u = BigInteger.Log(s1, s2);
+                Math.Round(u, 15);
                 result = u + "";
             }
             else
@@ -158,6 +166,7 @@ namespace Calc
             {
                 BigInteger s1 = BigInteger.Parse(st1);
                 double u = BigInteger.Log(s1);
+                Math.Round(u, 15);
                 result = u + "";
             }
             else
@@ -166,30 +175,7 @@ namespace Calc
             }
             return result;
         }
-        public static string Kv_koren(string st1)//квадратный корень(ДОРАБОТАТЬ)
-        {
-            System.Numerics.BigInteger N = System.Numerics.BigInteger.Parse(st1);
-            BigInteger rootN = N;
-            int bitLength = 1;
-            while (rootN / 2 != 0)
-            {
-                rootN /= 2;
-                bitLength++;
-            }
-            bitLength = (bitLength + 1) / 2;
-            rootN = N >> bitLength;
-
-            BigInteger lastRoot = BigInteger.Zero;
-            do
-            {
-                lastRoot = rootN;
-                rootN = (BigInteger.Divide(N, rootN) + rootN) >> 1;
-            }
-            while (!((rootN ^ lastRoot).ToString() == "0"));
-            string rootN1 = rootN + "";
-            return rootN1;
-        }
- 
+        
     }
 
 }

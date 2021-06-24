@@ -71,6 +71,7 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(166, 543);
             this.panelMenu.TabIndex = 0;
+            this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseDown);
             // 
             // button3
             // 
