@@ -1,8 +1,0 @@
-        public static string Vozv_kv(string st1)//возведение в квадрат
-        {
-            BigInteger s1 = BigInteger.Parse(st1);
-            BigInteger p;
-            p = s1*s1;
-            string result = p + "";
-            return result;
-        }
