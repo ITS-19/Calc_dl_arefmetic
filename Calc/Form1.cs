@@ -174,12 +174,18 @@ namespace Calc
         {
             if (textBox1.Text == "")
             {
-                if (YT == true)
+                if (s1.IndexOf("-") != 0 || s2.IndexOf("-") != 0)
+                    listBox1.Items.Insert(cl, "Ошибка! Вы ввели некорректное число!");
+                else if (YT == true)
                 {
                     calculate();
+                    YT = false;
                 }
             }
-            else calculate();
+            else if(s1.IndexOf("-") != 0 || s2.IndexOf("-") != 0)
+                listBox1.Items.Insert(cl, "Ошибка! Вы ввели некорректное число!");
+            else
+                calculate();
 
          }
         
