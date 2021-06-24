@@ -12,6 +12,8 @@ using System.Media;
 
 namespace Calc
 {
+    public static class Del
+    {
         public static string Delenie(string st1, string st2)//деление
         {
             if (st1.Length <= 15 && st2.Length <= 15)
@@ -40,5 +42,5 @@ namespace Calc
                 return result;
             }
         }
-
+    }
 }
