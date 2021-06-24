@@ -18,8 +18,25 @@ namespace Calc
             InitializeComponent();
         }
 
-        int count = 0;
-        bool znak = true;
+        /*#region Смещение в listbox
+        private void lst_MeasureItem(object sender, MeasureItemEventArgs e)
+        {
+            e.ItemHeight = (int)e.Graphics.MeasureString(listBox1.Items[e.Index].ToString(), listBox1.Font, listBox1.Width).Height;
+        }
+
+        private void lst_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (listBox1.Items.Count > 0)
+            {
+                e.DrawBackground();
+                e.DrawFocusRectangle();
+                e.Graphics.DrawString(listBox1.Items[e.Index].ToString(), e.Font, new SolidBrush(e.ForeColor), e.Bounds);
+            }
+        }
+        #endregion Смещение в listbox*/
+
+        int count = 0, cl = 0;
+        bool znak = true, YT = false;
         string s1, s2, r;
 
         private void calculate()//функции расчета чисел
@@ -32,81 +49,90 @@ namespace Calc
                     s2 = textBox1.Text;
                     r = Func.Summa(s1, s2);
                     textBox1.Clear();
-                    textBox2.Text =r;
+                    listBox1.Items.RemoveAt(cl);
+                    listBox1.Items.Insert(cl,s1 +"+"+ s2 + "=" + r);
                     s1 = ""; s2 = ""; count = 0;
                     break;
                 case 2://вычитание
                     s2 = textBox1.Text;
                     r = Func.Vuch(s1, s2);
                     textBox1.Clear();
-                    textBox2.Text = r;
+                    listBox1.Items.RemoveAt(cl);
+                    listBox1.Items.Insert(cl, s1 + "-" + s2 + "=" + r);
                     s1 = ""; s2 = ""; count = 0;
                     break;
                 case 3://умножение
                     s2 = textBox1.Text;
                     r = Func.Umn(s1, s2);
                     textBox1.Clear();
-                    textBox2.Text = r;
+                    listBox1.Items.RemoveAt(cl);
+                    listBox1.Items.Insert(cl, s1 + "*" + s2 + "=" + r);
                     s1 = ""; s2 = ""; count = 0;
                     break;
                 case 4://деление
                     s2 = textBox1.Text;
                     r = Func.Delenie(s1, s2);
                     textBox1.Clear();
-                    textBox2.Text = r;
+                    listBox1.Items.RemoveAt(cl);
+                    listBox1.Items.Insert(cl, s1 + "/" + s2 + "=" + r);
                     s1 = ""; s2 = ""; count = 0;
                     break;
                 case 5://факториал
                     r = Func.Fact(s1);
                     textBox1.Clear();
-                    textBox2.Text = r;
+                    listBox1.Items.RemoveAt(cl);
+                    listBox1.Items.Insert(cl, s1 + "!" + "=" + r);
                     s1 = ""; s2 = ""; count = 0;
                     break;
                 case 6://возведение в квадрат
                     r = Func.Vozv_kv(s1);
                     textBox1.Clear();
-                    textBox2.Text = r;
+                    listBox1.Items.RemoveAt(cl);
+                    listBox1.Items.Insert(cl, s1 + "²" + "=" + r);
                     s1 = ""; s2 = ""; count = 0;
                     break;
                 case 7://возведение в n-ю степень
                     s2 = textBox1.Text;
                     r = Func.Vozv_n_stp(s1, s2);
                     textBox1.Clear();
-                    textBox2.Text = r;
+                    listBox1.Items.RemoveAt(cl);
+                    listBox1.Items.Insert(cl,"("+ s1 + "ⁿ" + " n=" + s2 + ") " +"=" + r);
                     s1 = ""; s2 = ""; count = 0;
                     break;
                 case 8://нахождение логарифма
                     s2 = textBox1.Text;
                     r = Func.Logarifm(s1, s2);
                     textBox1.Clear();
-                    textBox2.Text = r;
+                    listBox1.Items.RemoveAt(cl);
+                    listBox1.Items.Insert(cl, "(logₙ(" + s1 + ") n=" + s2 + ") " + "=" + r);
                     s1 = ""; s2 = ""; count = 0;
                     break;
                 case 9://нахождение натурального логарифма
                     r = Func.NLogarifm(s1);
                     textBox1.Clear();
-                    textBox2.Text = r;
+                    listBox1.Items.RemoveAt(cl);
+                    listBox1.Items.Insert(cl,"ln("+ s1 + ")=" + r);
                     s1 = ""; s2 = ""; count = 0;
                     break;
-                case 10://нахождение квадратного корня
+                /*case 10://нахождение квадратного корня
                     r = Func.Kv_koren(s1);
                     textBox1.Clear();
-                    textBox2.Text = r;
+                    vvd.Text = r;
                     s1 = ""; s2 = ""; count = 0;
-                    break;
+                    break;*/
             }
         }
 
-        #region Button menu
+        #region Кнопки меню
       
 
         private void button3_Click(object sender, EventArgs e)//выход
         {
             Close();
         }
-        #endregion Button menu
+        #endregion Кнопки меню
 
-        #region Button number and dr
+        #region Кнопки цифр, удаления и равно
         private void zero_Click(object sender, EventArgs e)//цифра ноль
         {
             textBox1.Text = textBox1.Text + 0;
@@ -157,32 +183,28 @@ namespace Calc
             textBox1.Text = textBox1.Text + 9;
         }
 
-        private void zapyataya_Click(object sender, EventArgs e)//запятая
-        {
-            /*
-            if (textBox1.Text.ToLower().Contains(','))
-            {
-                textBox1.Text = textBox1.Text + "";
-            }
-            else
-            {
-                textBox1.Text = textBox1.Text + ",";
-            }*/
-        }
-
         private void reset_Click(object sender, EventArgs e)//очищение поля ввода
                 {
                     textBox1.Clear();
-                    textBox2.Text = "";
+                    listBox1.Items.Clear();
+            s1 = ""; s2 = ""; count = 0;
             
   
                 }
 
-        private void ravno_Click(object sender, EventArgs e)//вывод результата ИСПРАВИТЬ
-                 {
-                           calculate();
-            
-                 }
+        private void ravno_Click(object sender, EventArgs e)/*вывод результата ИСПРАВИТЬ*/
+        {
+            if (textBox1.Text == "")
+            {
+                if (YT == true)
+                {
+                    calculate();
+                }
+            }
+            else calculate();
+
+         }
+        
    
         private void zn_Click(object sender, EventArgs e)//изменения знака числа
                 {
@@ -208,9 +230,9 @@ namespace Calc
                 textBox1.Text = textBox1.Text + text[i];
             }
         }
-        #endregion Button number
+        #endregion Кнопки цифр, удаления и равно
 
-        #region Function calculate
+        #region Функции калькулятора
         private void plus_Click(object sender, EventArgs e)//функция плюса
         {
             if (textBox1.Text == "" || textBox1.Text == "-")
@@ -222,7 +244,7 @@ namespace Calc
                 s1 = textBox1.Text;
                 count = 1;
                 textBox1.Clear();
-                textBox2.Text =s1 + "+";
+                listBox1.Items.Insert(cl, s1 + "+");
             }
             
         }
@@ -238,7 +260,7 @@ namespace Calc
                 s1 = textBox1.Text;
                 count = 2;
                 textBox1.Clear();
-                textBox2.Text = s1 + "-";
+                listBox1.Items.Insert(cl, s1 + "-");
             }
             
         }
@@ -254,7 +276,7 @@ namespace Calc
                 s1 = textBox1.Text;
                 count = 3;
                 textBox1.Clear();
-                textBox2.Text = s1 + "*";
+                listBox1.Items.Insert(cl, s1 + "*");
             }
             
         }
@@ -270,7 +292,7 @@ namespace Calc
                 s1 = textBox1.Text;
                 count = 4;
                 textBox1.Clear();
-                textBox2.Text = s1 + "/";
+                listBox1.Items.Insert(cl, s1 + "/");
             }
             
         }
@@ -284,14 +306,15 @@ namespace Calc
             }
             else
             {
+                YT = true;
                 s1 = textBox1.Text;
                 count = 6;
                 textBox1.Clear();
-                textBox2.Text = s1 + "²";
+                listBox1.Items.Insert(cl, s1 + "²");
             }
         }
 
-        private void sqrtt_Click(object sender, EventArgs e)//функция квадратного корня
+        /*private void sqrtt_Click(object sender, EventArgs e)//функция квадратного корня
         {
             if (textBox1.Text == "" || textBox1.Text == "-")
             {
@@ -302,9 +325,9 @@ namespace Calc
                 s1 = textBox1.Text;
                 count = 10;
                 textBox1.Clear();
-                textBox2.Text = "√" + s1;
+                vvd.Text = "√" + s1;
             }
-        }
+        }*/
 
         private void log_Click(object sender, EventArgs e)//функция логарифма
         {
@@ -319,7 +342,7 @@ namespace Calc
                 s1 = textBox1.Text;
                 count = 8;
                 textBox1.Clear();
-                textBox2.Text = "logₙ" + s1;
+                listBox1.Items.Insert(cl, "logₙ" + s1);
             }
         }
 
@@ -331,10 +354,11 @@ namespace Calc
             }
             else
             {
+                YT = true;
                 s1 = textBox1.Text;
                 count = 9;
                 textBox1.Clear();
-                textBox2.Text = "ln" + s1;
+                listBox1.Items.Insert(cl, "ln" + s1);
             }
         }
 
@@ -346,11 +370,19 @@ namespace Calc
             }
             else
             {
+                YT = true;
                 s1 = textBox1.Text;
                 count = 7;
                 textBox1.Clear();
-                textBox2.Text = s1 + "ⁿ";
+                listBox1.Items.Insert(cl, s1 + "ⁿ");
             }
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            base.Capture = false;
+            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+            this.WndProc(ref m);
         }
 
         private void fact_Click(object sender, EventArgs e)
@@ -365,21 +397,24 @@ namespace Calc
             {
                 if (proverka <= 11984)
                 {
+                    YT = true;
                     s1 = textBox1.Text;
                     count = 5;
                     textBox1.Clear();
-                    textBox2.Text = s1 + "!";
+                    listBox1.Items.Insert(cl, s1 + "!");
                 }
                 else
-                    textBox2.Text = "Ошибка! Введите число не превышающие 11984!";
+                    listBox1.Text = "Ошибка! Введите число не превышающие 11984!";
             }
             
         }
-        #endregion Function calculate
-        #region dopolnitel'no
+
+        #endregion Функции калькулятора
+
+        #region Настройки ввода в textbox
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)//ДОРАБОТАТЬ
         {
-            if (!Char.IsDigit(e.KeyChar))
+            if (!Char.IsDigit(e.KeyChar) )
                 e.Handled = true;
         }
 
@@ -430,10 +465,6 @@ namespace Calc
             {
                 ln.PerformClick();
             }
-            if (e.KeyCode == Keys.D)//квадратный корень
-            {
-                sqrtt.PerformClick();
-            }
             if (e.KeyCode == Keys.S)//возведение в квадрат
             {
                 kv_x.PerformClick();
@@ -453,7 +484,6 @@ namespace Calc
             textBox1.Focus();
         }
 
-        
-        #endregion dopolnitel'no
+        #endregion Настройки ввода в textbox
     }
 }

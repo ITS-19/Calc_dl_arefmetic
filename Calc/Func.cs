@@ -8,8 +8,6 @@ using static ExtendedNumerics.BigRational;
 using System.Media;
 
 
-
-
 namespace Calc
 {
     public static class Func
