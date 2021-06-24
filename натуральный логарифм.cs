@@ -21,6 +21,7 @@ namespace Calc
             {
                 BigInteger s1 = BigInteger.Parse(st1);
                 double u = BigInteger.Log(s1);
+                Math.Round(u, 15);
                 result = u + "";
             }
             else
