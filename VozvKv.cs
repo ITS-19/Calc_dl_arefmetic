@@ -12,6 +12,8 @@ using System.Media;
 
 namespace Calc
 {
+    public static class VozKv
+    {
         public static string Vozv_kv(string st1)//возведение в квадрат
         {
             BigInteger s1 = BigInteger.Parse(st1);
@@ -20,4 +22,5 @@ namespace Calc
             string result = p + "";
             return result;
         }
+    }
 }
