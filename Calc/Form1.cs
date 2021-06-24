@@ -18,23 +18,6 @@ namespace Calc
             InitializeComponent();
         }
 
-        /*#region Смещение в listbox
-        private void lst_MeasureItem(object sender, MeasureItemEventArgs e)
-        {
-            e.ItemHeight = (int)e.Graphics.MeasureString(listBox1.Items[e.Index].ToString(), listBox1.Font, listBox1.Width).Height;
-        }
-
-        private void lst_DrawItem(object sender, DrawItemEventArgs e)
-        {
-            if (listBox1.Items.Count > 0)
-            {
-                e.DrawBackground();
-                e.DrawFocusRectangle();
-                e.Graphics.DrawString(listBox1.Items[e.Index].ToString(), e.Font, new SolidBrush(e.ForeColor), e.Bounds);
-            }
-        }
-        #endregion Смещение в listbox*/
-
         int count = 0, cl = 0;
         bool znak = true, YT = false;
         string s1, s2, r;
@@ -114,12 +97,7 @@ namespace Calc
                     listBox1.Items.Insert(cl,"ln("+ s1 + ")=" + r);
                     s1 = ""; s2 = ""; count = 0;
                     break;
-                /*case 10://нахождение квадратного корня
-                    r = Func.Kv_koren(s1);
-                    textBox1.Clear();
-                    vvd.Text = r;
-                    s1 = ""; s2 = ""; count = 0;
-                    break;*/
+                
             }
         }
 
@@ -412,15 +390,20 @@ namespace Calc
         #endregion Функции калькулятора
 
         #region Настройки ввода в textbox
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)//ДОРАБОТАТЬ
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)//запрет на ввод символов
         {
-            if (!Char.IsDigit(e.KeyChar) )
-                e.Handled = true;
+            char ch = e.KeyChar;
+            //67 65 86 88 90
+            if ((!(Char.IsDigit(ch) || char.IsControl(e.KeyChar)) && !(ch == 8 || ch ==67 || ch ==86 || ch == 88))) e.Handled = true;
+
+
         }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)//ввод с клавиатуры
         {
-            if(e.KeyCode == Keys.Oemplus)//нажимается плюс с шифтом
+          
+
+            if (e.KeyCode == Keys.Oemplus)//нажимается плюс с шифтом
             {
                 plus.PerformClick();
             }
@@ -453,10 +436,10 @@ namespace Calc
             {
                 reset.PerformClick();
             }
-            if (e.KeyCode == Keys.Back)//бакспейс
+            /*if (e.KeyCode == Keys.Back)//бакспейс
             {
                 clear.PerformClick();
-            }
+            }*/
             if (e.KeyCode == Keys.H)//логарифм
             {
                 log.PerformClick();
@@ -469,7 +452,7 @@ namespace Calc
             {
                 kv_x.PerformClick();
             }
-            if (e.KeyCode == Keys.A)//возведение в n-ю степень
+            if (e.KeyCode == Keys.D)//возведение в n-ю степень
             {
                 n_x.PerformClick();
             }
