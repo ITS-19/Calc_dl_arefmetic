@@ -12,7 +12,9 @@ using System.Media;
 
 namespace Calc
 {
-       public static string Fact(string st1)//нахождение факториала
+    public static class F
+    {
+        public static string Fact(string st1)//нахождение факториала
         {
             BigInteger s1 = BigInteger.Parse(st1);
             string result;
@@ -32,5 +34,5 @@ namespace Calc
             }
             return result;
         }
-
+    }
 }
